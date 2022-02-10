@@ -4,13 +4,13 @@ using namespace std;
 int main()
 {
     int n;
-    int index_of_minimum=0;
+    int index_of_minimum = 0;
     cout << "Enter the amount of numbers you want to sort: ";
     cin >> n;
 
     int ListOfNumber[n];
-    cout<<"List the numbers: ";
-    
+    cout << "List the numbers: ";
+
     for (int i = 0; i < n; i++)
     {
         cin >> ListOfNumber[i];
@@ -24,16 +24,16 @@ int main()
     }
     cout << "]" << endl;
 
-    for (int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        index_of_minimum=i;
-        for(int j=i+1;j<n;j++)
+        index_of_minimum = i;
+        for (int j = i + 1; j < n; j++)
         {
-            if(ListOfNumber[j]< ListOfNumber[index_of_minimum])
+            if (ListOfNumber[j] < ListOfNumber[index_of_minimum])
             {
-                index_of_minimum=j;
+                index_of_minimum = j;
             }
-            swap(ListOfNumber[index_of_minimum],ListOfNumber[i]);
+            swap(ListOfNumber[index_of_minimum], ListOfNumber[i]);
         }
     }
     cout << "Sorted Array By Sorting Algorithm: [ ";
