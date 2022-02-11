@@ -44,7 +44,7 @@ int main()
     BubbleSort(ListOfNumber,n);
 
 
-    cout << "Sorted Array: [ ";
+    cout << "Sorted Array by Bubble Sort Algorithm: [ ";
     for (int i = 0; i < n; i++)
     {
         cout << ListOfNumber[i] << " ";
