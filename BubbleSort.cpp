@@ -1,5 +1,26 @@
 #include <iostream>
 using namespace std;
+
+
+void BubbleSort(int array[],int size)
+{
+
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                swap(array[j], array[j + 1]);
+            }
+            else
+            {
+                continue;
+            }
+        }
+    }
+}
+
 int main()
 {
 
@@ -20,27 +41,15 @@ int main()
     }
     cout << "]" << endl;
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            if (ListOfNumber[j] > ListOfNumber[j + 1])
-            {
-                swap(ListOfNumber[j], ListOfNumber[j + 1]);
-            }
-            else
-            {
-                continue;
-            }
-        }
-    }
+    BubbleSort(ListOfNumber,n);
+
 
     cout << "Sorted Array: [ ";
     for (int i = 0; i < n; i++)
     {
         cout << ListOfNumber[i] << " ";
     }
-    cout << "]";
+    cout << "]"<<endl;
 
     return 0;
 }
